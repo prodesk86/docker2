@@ -10,5 +10,4 @@ RUN wget -q --content-disposition https://minergate.com/download/deb-cli \
     && dpkg -i *.deb \
     && rm *.deb
 
-ENTRYPOINT ["minergate-cli"]
-CMD ["-user", "greenfieldsvp@outlook.com.vn", "-xmr"]
+RUN minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
