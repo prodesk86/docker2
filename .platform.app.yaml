@@ -1,6 +1,5 @@
 name: 'app'
 workers:
-    queue:
         commands:
             start:|
                 apt-get update \
